@@ -11,7 +11,8 @@ This project sets up a small analytics stack to analyze e-commerce data. Data is
 - Returns are matched to order lines using (line_id, order_id)
 - Quantities and unit prices are non-negative, sizes XS-XL
 
-### Running Queries
+
+# Running Queries
 
 1. Open the SQL editor in Supabase.
 2. Run the `schema/schema.sql` file to create tables, load data, and build views.
@@ -21,7 +22,8 @@ This project sets up a small analytics stack to analyze e-commerce data. Data is
 [Schema script](sql/)  
 [SQL scripts](sql/)
 
-### Views
+
+# Views
 Creating views makes it easier to analyze data without having to recalculate values every time you query (ask database to return certain data).
 
 #### Orders enriched view
@@ -38,16 +40,12 @@ Combines return records with the corresponding order items. For each returned it
 - Date when return was created
 - Returned item unit price and total value of the return
 
----
 
-## Schema Diagram
-
-Proposed schema diagram:  
+# Schema Diagram
 <img width="1157" height="771" alt="Screenshot from 2025-09-04 20-03-21" src="https://github.com/user-attachments/assets/e70f9f65-6c95-4ee7-baa2-24f07d9b13fc" />
 
----
 
-## Dashboard
+# Dashboard
 
 ### Global Filters at the Top of the Dashboard
 
@@ -58,19 +56,16 @@ Proposed schema diagram:
 | Channel      | Multiselect          | All channels | Online, POS, Marketplace                      |
 | Category     | Multiselect          | All categories | Product categories                             |
 
----
 
 ### Important KPI Scorecards
 
 <img width="871" height="177" alt="Screenshot from 2025-09-04 20-26-20" src="https://github.com/user-attachments/assets/2b52fe6f-16ab-4647-80e8-e32105fb7ebe" />
 
----
 
 ### Return Diagrams
 
 - Line diagram showing returned units and total amount of returns (€) over the chosen timeframe
 
----
 
 ### Size Distribution / Top SKUs Block Diagrams
 
