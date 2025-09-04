@@ -55,18 +55,15 @@ Combines return records with the corresponding order items. For each returned it
 | Country      | Multiselect          | All countries | List of countries                             |
 | Channel      | Multiselect          | All channels | Online, POS, Marketplace                      |
 | Category     | Multiselect          | All categories | Product categories                             |
-
-
-### Important KPI Scorecards
-
+  
+### Scorecards
 <img width="871" height="177" alt="Screenshot from 2025-09-04 20-26-20" src="https://github.com/user-attachments/assets/2b52fe6f-16ab-4647-80e8-e32105fb7ebe" />
 
-
-### Return Diagrams
-
-- Line diagram showing returned units and total amount of returns (€) over the chosen timeframe
-
-
+### Country / Channel Split
+- Bar charts showing net sales by country or by channel
+  
+### Returns Diagram
+- Line diagram showing returned units and total value of returns over the chosen timeframe
+  
 ### Size Distribution / Top SKUs Block Diagrams
-
 <img width="401" height="415" alt="Screenshot from 2025-09-04 20-36-20" src="https://github.com/user-attachments/assets/0b6b42ee-68ae-4992-9ce8-d9008813c3ce" />
