@@ -4,12 +4,22 @@ This project sets up a small analytics stack to analyze e-commerce data. Data is
 
 ### Assumptions
 
+- SKUs are unique and map to one product_id
+- Discounts are applied directly to net_sales
+- Net sales include discounts and shipping fees
+- Each line_id is unique per order
+- Returns are matched to order lines using (line_id, order_id)
+- Quantities and unit prices are non-negative, sizes XS-XL
+
 ### Running Queries
 
 1. Open the SQL editor in Supabase.
 2. Run the `schema/schema.sql` file to create tables, load data, and build views.
 3. Run the `sql/v_orders_enriched.sql` and `sql/v_returns_enriched.sql` files to create the normalized metric views.
 4. Run the remaining SQL files in the sql/ folder to generate KPIs and perform data quality checks.
+
+[Schema script](sql/)  
+[SQL scripts](sql/)
 
 ### Views
 Creating views makes it easier to analyze data without having to recalculate values every time you query (ask database to return certain data).
@@ -28,6 +38,7 @@ Combines return records with the corresponding order items. For each returned it
 - Date when return was created
 - Returned item unit price and total value of the return
 
+---
 
 ## Schema Diagram
 
