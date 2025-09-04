@@ -1,6 +1,8 @@
 # Plein Publique Technical Exercise
 
-This project sets up a small analytics stack to analyze e-commerce data. Data is imported into Supabase (Postgres), transformed with SQL views, and can be visualized in a Looker Studio dashboard.
+This project sets up a small analytics stack to analyze e-commerce data. Data is imported into Supabase (Postgres), transformed with SQL views and can be visualized in a Looker Studio dashboard or any other analytics tool.
+
+### Assumptions
 
 ### Running Queries
 
@@ -8,6 +10,24 @@ This project sets up a small analytics stack to analyze e-commerce data. Data is
 2. Run the `schema/schema.sql` file to create tables, load data, and build views.
 3. Run the `sql/v_orders_enriched.sql` and `sql/v_returns_enriched.sql` files to create the normalized metric views.
 4. Run the remaining SQL files in the sql/ folder to generate KPIs and perform data quality checks.
+
+### Views
+Creating views makes it easier to analyze data without having to recalculate values every time you query (ask database to return certain data).
+
+#### Orders enriched view
+Combines orders with their items and calculates:
+- Total cost of all items
+- Shipping cost
+- Total revenue for the order
+- Number of items in the order
+
+#### Returns enriched view
+Combines return records with the corresponding order items. For each returned item it includes:
+- Order, product and line info of the returned item
+- Returned quantity and return reason
+- Date when return was created
+- Returned item unit price and total value of the return
+
 
 ## Schema Diagram
 
