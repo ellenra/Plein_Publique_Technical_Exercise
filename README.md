@@ -8,7 +8,7 @@ This project sets up a small analytics stack to analyze e-commerce data. Data is
 - Discounts are applied directly to net_sales
 - Net sales include discounts and shipping fees
 - Each line_id is unique per order
-- Returns are matched to order lines using (line_id, order_id)
+- Returns are matched to order items using (line_id, order_id)
 - Quantities and unit prices are non-negative, sizes XS-XL
 
 
