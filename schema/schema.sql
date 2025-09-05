@@ -78,34 +78,3 @@ create table public.returns (
   constraint returns_product_id_fkey foreign KEY (product_id) references products (id) on update CASCADE on delete set null
 ) TABLESPACE pg_default;
 
-select o.id,
-  o.customer_id,
-  o.order_created_at,
-  o.channel,
-  o.country,
-  COALESCE(sum((oi.unit_price * (oi.quantity)::double precision)), (0)::double precision) AS items_total,
-  COALESCE(o.shipping_amount, (0)::double precision) AS shipping_amount,
-  (COALESCE(sum((oi.unit_price * (oi.quantity)::double precision)), (0)::double precision) + COALESCE(o.shipping_amount, (0)::double precision)) AS net_sales,
-  count(oi.order_id) AS item_count
-from (orders o
-  left join order_items oi ON ((o.id = oi.order_id)))
-group by 
-    o.id, 
-    o.customer_id, 
-    o.order_created_at, 
-    o.channel, 
-    o.country, 
-    o.shipping_amount;
-
-select r.return_id,
-  r.order_id,
-  r.product_id,
-  r.line_id,
-  r.returned_quantity,
-  r.return_reason,
-  r.return_created_at,
-  oi.unit_price,
-  ((r.returned_quantity)::double precision * oi.unit_price) as return_value
-from (returns r
-  join order_items oi on (((r.order_id = oi.order_id) and (r.line_id = oi.line_id))));
-
