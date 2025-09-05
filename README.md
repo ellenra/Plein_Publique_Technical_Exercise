@@ -44,6 +44,8 @@ Combines return records with the corresponding order items. For each returned it
 # Schema Diagram
 <img width="1157" height="771" alt="Screenshot from 2025-09-04 20-03-21" src="https://github.com/user-attachments/assets/e70f9f65-6c95-4ee7-baa2-24f07d9b13fc" />
 
+Note: The composite foreign key (`line_id, order_id`) from returns -> order_items isn't shown here because Supabase's visualizer doesn't display composite keys. I added it after finding duplicate `line_id`s. I was not sure if it was a data inconsistency or if `line_id`s aren't supposed to be unique.
+
 
 # Dashboard
 
