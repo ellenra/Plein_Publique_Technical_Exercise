@@ -1,6 +1,6 @@
 # Plein Publique Technical Exercise
 
-This project sets up a small analytics stack to analyze e-commerce data. Data is imported into Supabase (Postgres), transformed with SQL views and can be visualized in a Looker Studio dashboard or any other analytics tool.
+This project sets up a small analytics workflow to analyze e-commerce data. Data is imported into Supabase (Postgres), transformed with SQL views and can be visualized in a Looker Studio dashboard or any other analytics tool.
 
 ### Assumptions
 
