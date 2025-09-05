@@ -35,7 +35,7 @@ Combines orders with their items and calculates:
 
 #### Returns enriched view
 Combines return records with the corresponding order items. For each returned item it includes:
-- Order, product and line info of the returned item
+- Order id, product id and line id of the returned item
 - Returned quantity and return reason
 - Date when return was created
 - Returned item unit price and total value of the return
