@@ -19,7 +19,7 @@ This project sets up a small analytics stack to analyze e-commerce data. Data is
 3. Run the `sql/v_orders_enriched.sql` and `sql/v_returns_enriched.sql` files to create the normalized metric views.
 4. Run the remaining SQL files in the sql/ folder to generate KPIs and perform data quality checks.
 
-[Schema script](sql/)  
+[Schema script](schema/schema.sql)  
 [SQL scripts](sql/)
 
 
